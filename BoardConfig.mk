@@ -20,10 +20,10 @@ LOCAL_PATH := device/samsung/e53g
 -include device/samsung/msm8916-common/BoardConfigCommon.mk
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/e53g
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_e53g_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/e53g
 
 # Partition Info
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
@@ -38,3 +38,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+BOARD_USES_MMC_UTILS := true
+BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_HAS_NO_MISC_PARTITION := true
